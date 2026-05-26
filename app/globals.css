@@ -21,14 +21,14 @@ html {
 
 body {
   margin: 0;
-  background-color: #030615;
+  background-color: #050711;
   background-image:
-    radial-gradient(at 14% 21%, rgba(0, 23, 43, 0.86) 0px, transparent 46%),
-    radial-gradient(at 84% 88%, rgba(0, 23, 43, 0.82) 0px, transparent 44%),
-    radial-gradient(at 72% 22%, rgba(62, 0, 38, 0.58) 0px, transparent 42%),
-    radial-gradient(at 24% 82%, rgba(55, 20, 0, 0.5) 0px, transparent 42%),
-    radial-gradient(at 92% 44%, rgba(42, 46, 0, 0.4) 0px, transparent 44%),
-    radial-gradient(at 42% 68%, rgba(5, 13, 36, 0.88) 0px, transparent 48%);
+    radial-gradient(at 14% 21%, rgba(0, 17, 32, 0.68) 0px, transparent 48%),
+    radial-gradient(at 84% 88%, rgba(0, 17, 32, 0.62) 0px, transparent 46%),
+    radial-gradient(at 72% 22%, rgba(42, 0, 27, 0.28) 0px, transparent 42%),
+    radial-gradient(at 24% 82%, rgba(38, 15, 0, 0.26) 0px, transparent 44%),
+    radial-gradient(at 92% 44%, rgba(32, 34, 0, 0.2) 0px, transparent 44%),
+    radial-gradient(at 42% 68%, rgba(4, 10, 26, 0.78) 0px, transparent 50%);
   background-attachment: fixed;
   background-size: 180% 180%;
   color: var(--fg);
@@ -191,7 +191,7 @@ h1 {
 }
 
 .entry-title a {
-  color: var(--accent-2);
+  color: var(--accent);
   font-size: 0.76rem;
   white-space: nowrap;
 }

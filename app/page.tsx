@@ -93,14 +93,14 @@ export default function Home() {
       <section className="hero section-shell" id="intro">
         <h1>Shaaf Shahzad</h1>
         <p className="subhead">
-          Computer Engineering student at Toronto Metropolitan University,
+          Software Engineering student at Toronto Metropolitan University,
           building practical software across web, AI, and developer workflow.
         </p>
         <p className="intro-copy">
-          I like fast interfaces, clear systems, and tools that make technical
-          work easier for real users.
+          I build toward thoughtful, useful software that turns ambiguous
+          problems into clearer systems.
         </p>
-        <p className="hiring-line">Hiring for software roles? Reach out by email.</p>
+        <p className="hiring-line">I am open to software roles. Reach out by email.</p>
         <div className="contact-line" aria-label="Contact links">
           {links.map((link) => (
             <a href={link.href} key={link.href}>
