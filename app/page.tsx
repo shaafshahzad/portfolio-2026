@@ -91,19 +91,16 @@ export default function Home() {
   return (
     <main>
       <section className="hero section-shell" id="intro">
-        <p className="kicker">Portfolio 2026</p>
         <h1>Shaaf Shahzad</h1>
         <p className="subhead">
           Computer Engineering student at Toronto Metropolitan University,
-          building practical software across web, AI, data, and developer
-          workflow.
+          building practical software across web, AI, and developer workflow.
         </p>
         <p className="intro-copy">
-          I like small, fast interfaces, clear systems, and projects that make
-          technical work easier for real users. Currently focused on software
-          engineering, full-stack development, and infrastructure-minded
-          automation.
+          I like fast interfaces, clear systems, and tools that make technical
+          work easier for real users.
         </p>
+        <p className="hiring-line">Hiring for software roles? Reach out by email.</p>
         <div className="contact-line" aria-label="Contact links">
           {links.map((link) => (
             <a href={link.href} key={link.href}>
