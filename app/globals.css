@@ -6,7 +6,6 @@
   --fg: #eeeeee;
   --muted: #a9b1bd;
   --soft: #627089;
-  --line: rgba(226, 232, 240, 0.13);
   --accent: #f8c8dc;
 }
 
@@ -155,7 +154,6 @@ h1 {
 }
 
 .entry {
-  border-bottom: 1px solid var(--line);
   padding: 0 0 1rem;
 }
 
