@@ -40,6 +40,20 @@ Source inspected: `/Users/shaaf/repos/portfolio`.
   `/relay` rewrites in `next.config`, with the client `api_host` set to
   `/relay`.
 
+## 2026 Direction
+
+- Reference: `https://mohid.dev/`.
+- Adopt the simple single-page resume feel: narrow text column, dark background,
+  monospaced typography, direct links, and stacked sections.
+- Keep the page closer to Shaaf's old portfolio by preserving the pink accent,
+  contact-first intro, and selected project inventory.
+- Target sections:
+  - Intro + contact
+  - Projects / highlights
+  - Experience
+  - Education
+  - Stack / skills
+
 ## Deliberately Not Copied Yet
 
 - Full visual system

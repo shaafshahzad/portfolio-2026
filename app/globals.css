@@ -1,7 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
+  --bg: #101010;
+  --fg: #eeeeee;
+  --muted: #aaa4a0;
+  --soft: #706b67;
+  --line: #2b2927;
+  --accent: #f8c8dc;
+  --accent-2: #d7ff7a;
 }
 
 * {
@@ -14,4 +21,286 @@ html {
 
 body {
   margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "SFMono-Regular", "Roboto Mono", "Cascadia Code", "Liberation Mono",
+    Menlo, Consolas, monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--soft);
+  text-underline-offset: 0.2em;
+  transition:
+    color 160ms ease,
+    text-decoration-color 160ms ease;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+main {
+  min-height: 100vh;
+  padding-bottom: 8rem;
+}
+
+.site-nav {
+  align-items: center;
+  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  font-size: 0.78rem;
+  justify-content: space-between;
+  left: 0;
+  margin: 0 auto;
+  max-width: 52rem;
+  padding: 1rem 1.5rem;
+  position: sticky;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.site-nav > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  justify-content: flex-end;
+}
+
+.home-link {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.section-shell {
+  margin: 0 auto;
+  max-width: 52rem;
+  padding: 5.5rem 1.5rem 0;
+}
+
+.hero {
+  min-height: calc(100vh - 3.25rem);
+  padding-top: 7rem;
+}
+
+.kicker,
+.section-heading p,
+.email-line,
+.date,
+.muted,
+.entry span,
+.footer-note {
+  color: var(--muted);
+}
+
+.kicker {
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  margin: 0 0 1.25rem;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 9vw, 5.6rem);
+  letter-spacing: 0;
+  line-height: 0.96;
+  margin-bottom: 1.2rem;
+}
+
+.subhead {
+  color: #d6d2ce;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.7;
+  max-width: 45rem;
+}
+
+.intro-copy {
+  color: #c1bbb6;
+  line-height: 1.8;
+  max-width: 42rem;
+}
+
+.contact-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.email-line {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.section-heading {
+  align-items: baseline;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 3.5rem 1fr;
+  margin-bottom: 2rem;
+  padding-bottom: 0.9rem;
+}
+
+.section-heading p {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+.section-heading h2 {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.highlight-list,
+.project-list,
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.highlight-list {
+  margin-bottom: 2rem;
+}
+
+.entry {
+  border-bottom: 1px solid var(--line);
+  padding: 0 0 1.35rem;
+}
+
+.entry.compact {
+  border-left: 2px solid var(--accent);
+  padding-left: 1rem;
+}
+
+.entry h3 {
+  font-size: 1rem;
+  line-height: 1.45;
+  margin-bottom: 0.45rem;
+}
+
+.entry p,
+.entry li {
+  color: #c9c3bd;
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+.entry p:last-child,
+.entry ul {
+  margin-bottom: 0;
+}
+
+.entry span,
+.muted {
+  font-size: 0.86rem;
+}
+
+.entry-title {
+  align-items: baseline;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.entry-title a {
+  color: var(--accent-2);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.org {
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.date {
+  font-size: 0.78rem;
+  line-height: 1.6;
+  text-align: right;
+  white-space: nowrap;
+}
+
+ul {
+  padding-left: 1.1rem;
+}
+
+li + li {
+  margin-top: 0.35rem;
+}
+
+.stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.stack-list span {
+  border: 1px solid var(--line);
+  color: #d8d2cc;
+  font-size: 0.82rem;
+  padding: 0.45rem 0.6rem;
+}
+
+.footer-note {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  margin-top: 2rem;
+  max-width: 38rem;
+}
+
+.final-section {
+  padding-bottom: 2rem;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+@media (max-width: 720px) {
+  .site-nav {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .site-nav > div {
+    gap: 0.65rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 5rem;
+  }
+
+  .section-shell {
+    padding-top: 4rem;
+  }
+
+  .section-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-title {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .date {
+    text-align: left;
+    white-space: normal;
+  }
 }
