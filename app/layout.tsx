@@ -8,9 +8,9 @@ const jetBrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio 2026 | Shaaf Shahzad",
-  description:
-    "Shaaf Shahzad's one-page portfolio: projects, experience, education, and contact.",
+  title: "Shaaf Shahzad",
+  description: "Personal Portfolio of Shaaf Shahzad",
+  icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
 export default function RootLayout({
