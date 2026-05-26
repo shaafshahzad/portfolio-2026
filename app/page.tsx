@@ -4,24 +4,11 @@ const links = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/shaafshahzad/" },
 ];
 
-const sections = [
-  { label: "Intro", href: "#intro" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Education", href: "#education" },
-  { label: "Stack", href: "#stack" },
-];
-
 const highlights = [
   {
     title: "ECCC Forecast Pages",
     text: "Modernized high-traffic city location pages and centralized Vuex forecast fetching for pages serving up to 40M+ monthly visits.",
     meta: "Vue • Vuex • Python • 75% faster data fetches",
-  },
-  {
-    title: "DeepEnd",
-    text: "Award-winning project-based learning platform for aspiring software developers.",
-    meta: "Google Solutions Challenge winner • TypeScript • Firebase",
   },
 ];
 
@@ -118,19 +105,6 @@ function SectionHeading({
 export default function Home() {
   return (
     <main>
-      <nav aria-label="Section navigation" className="site-nav">
-        <a className="home-link" href="#intro">
-          SS
-        </a>
-        <div>
-          {sections.map((section) => (
-            <a href={section.href} key={section.href}>
-              {section.label}
-            </a>
-          ))}
-        </div>
-      </nav>
-
       <section className="hero section-shell" id="intro">
         <p className="kicker">Portfolio 2026</p>
         <h1>Shaaf Shahzad</h1>
@@ -235,10 +209,6 @@ export default function Home() {
             <span key={item}>{item}</span>
           ))}
         </div>
-        <p className="footer-note">
-          This page stays intentionally simple: one scroll, fast scanning, and
-          enough context to start a conversation.
-        </p>
       </section>
     </main>
   );
