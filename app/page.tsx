@@ -1,15 +1,7 @@
 const links = [
-  { label: "Email", href: "mailto:shaaf.m.shahzad@gmail.com" },
   { label: "GitHub", href: "https://github.com/shaafshahzad" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/shaafshahzad/" },
-];
-
-const highlights = [
-  {
-    title: "ECCC Forecast Pages",
-    text: "Modernized high-traffic city location pages and centralized Vuex forecast fetching for pages serving up to 40M+ monthly visits.",
-    meta: "Vue • Vuex • Python • 75% faster data fetches",
-  },
+  { label: "X/Twitter", href: "https://x.com/shaafshahzad" },
 ];
 
 const projects = [
@@ -87,16 +79,9 @@ const stack = [
   "Tailwind CSS",
 ];
 
-function SectionHeading({
-  eyebrow,
-  title,
-}: {
-  eyebrow: string;
-  title: string;
-}) {
+function SectionHeading({ title }: { title: string }) {
   return (
     <div className="section-heading">
-      <p>{eyebrow}</p>
       <h2>{title}</h2>
     </div>
   );
@@ -130,17 +115,7 @@ export default function Home() {
       </section>
 
       <section className="section-shell" id="projects">
-        <SectionHeading eyebrow="01" title="Projects / Highlights" />
-        <div className="highlight-list">
-          {highlights.map((highlight) => (
-            <article className="entry compact" key={highlight.title}>
-              <h3>{highlight.title}</h3>
-              <p>{highlight.text}</p>
-              <span>{highlight.meta}</span>
-            </article>
-          ))}
-        </div>
-
+        <SectionHeading title="Projects" />
         <div className="project-list" aria-label="Selected projects">
           {projects.map((project) => (
             <article className="entry" key={project.name}>
@@ -156,7 +131,7 @@ export default function Home() {
       </section>
 
       <section className="section-shell" id="experience">
-        <SectionHeading eyebrow="02" title="Experience" />
+        <SectionHeading title="Experience" />
         <div className="timeline">
           {experience.map((item) => (
             <article className="entry" key={`${item.org}-${item.role}`}>
@@ -182,7 +157,7 @@ export default function Home() {
       </section>
 
       <section className="section-shell" id="education">
-        <SectionHeading eyebrow="03" title="Education" />
+        <SectionHeading title="Education" />
         <article className="entry">
           <div className="entry-title">
             <div>
@@ -203,7 +178,7 @@ export default function Home() {
       </section>
 
       <section className="section-shell final-section" id="stack">
-        <SectionHeading eyebrow="04" title="Stack" />
+        <SectionHeading title="Stack" />
         <div className="stack-list">
           {stack.map((item) => (
             <span key={item}>{item}</span>
