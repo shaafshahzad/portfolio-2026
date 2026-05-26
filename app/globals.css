@@ -8,7 +8,6 @@
   --soft: #627089;
   --line: rgba(226, 232, 240, 0.13);
   --accent: #f8c8dc;
-  --accent-2: #d7ff7a;
 }
 
 * {
@@ -191,9 +190,13 @@ h1 {
 }
 
 .entry-title a {
-  color: var(--accent);
+  color: #f8c8dc;
   font-size: 0.76rem;
   white-space: nowrap;
+}
+
+.entry-title a:visited {
+  color: #f8c8dc;
 }
 
 .org {
