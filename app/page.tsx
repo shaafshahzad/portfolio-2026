@@ -73,13 +73,12 @@ export default function Home() {
                   and 58 application paths.
                 </p>
                 <p>
-                  standardized diagnostics across 15 python monitoring scripts
-                  with rotating logs and development-team alert integration.
+                  standardized 15 python monitoring scripts with rotating logs
+                  and team alerts.
                 </p>
                 <p>
-                  built a gitlab development workflow around feature branches,
-                  ci validation, stakeholder preview branches, and review-ready
-                  merge requests.
+                  built a gitlab workflow with feature branches, ci checks,
+                  preview branches, and merge requests.
                 </p>
               </div>
             </div>
