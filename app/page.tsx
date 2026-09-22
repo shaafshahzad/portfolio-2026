@@ -102,7 +102,7 @@ export default function Home() {
         </section>
       </div>
       <footer className="footer">
-        <Link className="blog-link" href="/blog">
+        <Link className="blog-link accent-cycle" href="/blog">
           blog <span aria-hidden="true">↗</span>
         </Link>
         <ThemeSelect />
