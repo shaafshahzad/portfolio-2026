@@ -33,7 +33,7 @@ export default function Blog() {
         </Link>
         <ThemeSelect />
       </div>
-      <h1>blog</h1>
+      <h1 className="accent-cycle">blog</h1>
       <ol className="blog-list">
         {entries.map((entry) => (
           <li key={entry.href}>

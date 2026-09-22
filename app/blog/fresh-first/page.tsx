@@ -174,7 +174,7 @@ export default function FreshFirstPost() {
       </div>
 
       <header className="article-header">
-        <h1>fresh first</h1>
+        <h1 className="accent-cycle">fresh first</h1>
         <p className="entry-meta">september 22, 2026</p>
       </header>
 

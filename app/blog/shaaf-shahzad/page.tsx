@@ -166,7 +166,7 @@ export default function ShaafShahzadPost() {
       </div>
 
       <header className="article-header">
-        <h1>shaaf shahzad</h1>
+        <h1 className="accent-cycle">shaaf shahzad</h1>
         <p className="entry-meta">september 1, 2026</p>
       </header>
 
