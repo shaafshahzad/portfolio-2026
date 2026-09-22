@@ -69,18 +69,6 @@ export default function Home() {
               </div>
             </div>
           </article>
-          <article className="experience">
-            <h3>Islamic Relief Canada</h3>
-            <div className="experience-detail">
-              <p className="entry-meta">
-                Donor relations volunteer · 2019–2023
-              </p>
-              <p className="experience-point">
-                Coordinated nationwide donor mail campaigns and cleaned donor
-                records, reducing returned mail by 20%.
-              </p>
-            </div>
-          </article>
         </section>
         <section aria-labelledby="projects-heading">
           <h2 id="projects-heading" className="accent-cycle">
