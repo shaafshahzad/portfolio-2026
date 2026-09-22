@@ -66,6 +66,15 @@ export default function Home() {
                   Expanded Python monitoring across 3 environments, 27 hosts,
                   and 58 application paths.
                 </p>
+                <p>
+                  Standardized diagnostics across 15 Python monitoring scripts
+                  with rotating logs and development-team alert integration.
+                </p>
+                <p>
+                  Built a GitLab development workflow around feature branches,
+                  CI validation, stakeholder preview branches, and review-ready
+                  merge requests.
+                </p>
               </div>
             </div>
           </article>
