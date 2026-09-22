@@ -41,7 +41,7 @@ export default function ThemeToggle() {
     <button
       className={`theme-control ${theme === "dark" ? "is-dark" : "is-light"}`}
       type="button"
-      aria-label={`Switch to ${nextTheme} mode`}
+      aria-label={`switch to ${nextTheme} mode`}
       onClick={() => {
         document.documentElement.dataset.theme = nextTheme;
         try {

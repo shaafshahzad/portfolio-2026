@@ -100,7 +100,7 @@ export default function Portrait() {
     <figure className="portrait">
       <Image
         src="/shaaf-photo.jpg"
-        alt="Shaaf smiling, with a grid of colored squares over his photograph."
+        alt="shaaf smiling, with a grid of colored squares over his photograph."
         width={1024}
         height={1024}
         unoptimized
