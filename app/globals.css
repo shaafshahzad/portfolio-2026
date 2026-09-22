@@ -95,16 +95,16 @@ h2 {
   grid-template-columns: minmax(560px, 1.05fr) minmax(0, 0.95fr);
   grid-template-rows: auto 1fr auto;
   column-gap: clamp(28px, 4vw, 64px);
-  row-gap: 24px;
-  margin: 20px auto;
-  padding: 28px;
-  width: calc(100% - 40px);
+  row-gap: 12px;
+  margin: 12px auto;
+  padding: 20px;
+  width: calc(100% - 24px);
   max-width: 1500px;
-  height: calc(100svh - 40px);
+  height: calc(100svh - 24px);
   min-height: 0;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 28px;
+  border-radius: 24px;
 }
 .intro {
   grid-column: 1;
@@ -155,14 +155,13 @@ h2 {
 .work {
   grid-column: 1;
   grid-row: 2;
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(190px, 0.8fr);
-  align-content: start;
-  gap: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   padding-left: 4px;
 }
 .experience + .experience {
-  margin-top: 16px;
+  margin-top: 8px;
 }
 .experience h3 {
   margin: 0;
@@ -173,29 +172,33 @@ h2 {
 .entry-meta {
   font-size: 13px;
   color: var(--muted);
-  margin-bottom: 7px;
+  margin-bottom: 4px;
 }
 .experience-detail {
-  margin-top: 5px;
-  font-size: 14px;
+  margin-top: 3px;
+  font-size: 13px;
+  line-height: 1.5;
 }
 .experience-points {
   margin: 0;
   padding-left: 18px;
 }
 .experience-points p + p {
-  margin-top: 5px;
+  margin-top: 2px;
 }
 .experience-point {
   margin-left: 18px;
 }
 .projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 24px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .projects li + li {
-  margin-top: 9px;
+  margin-top: 0;
 }
 .projects a {
   display: flex;
@@ -207,6 +210,7 @@ h2 {
 .projects p {
   color: var(--muted);
   font-size: 13px;
+  line-height: 1.4;
 }
 .footer {
   grid-column: 1;
@@ -532,8 +536,8 @@ h2 {
 }
 @media (min-width: 1600px) {
   .portfolio {
-    height: min(860px, calc(100svh - 40px));
-    margin-block: max(20px, calc((100svh - 860px) / 2));
+    height: min(876px, calc(100svh - 24px));
+    margin-block: max(12px, calc((100svh - 876px) / 2));
   }
 }
 @media (min-width: 1001px) {
@@ -551,7 +555,6 @@ h2 {
     overflow: visible;
   }
   .work {
-    grid-template-columns: minmax(0, 1fr);
     gap: 24px;
   }
 }
@@ -587,6 +590,10 @@ h2 {
     flex-direction: column;
     padding: 0;
     gap: 28px;
+  }
+  .projects {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 9px;
   }
   .footer {
     grid-row: 4;
