@@ -10,6 +10,7 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://shaafshahzad.com"),
   title: "Shaaf Shahzad",
   description: "Personal Portfolio of Shaaf Shahzad",
   icons: [{ rel: "icon", url: "/icon.svg", type: "image/svg+xml" }],
