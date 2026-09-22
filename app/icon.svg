@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .field { fill: #fff; }
+    .edge { stroke: #000; }
+    @media (prefers-color-scheme: dark) {
+      .field { fill: #000; }
+      .edge { stroke: #fff; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="accent" x1="8" y1="56" x2="56" y2="8" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#bd5b07"/>
+      <stop offset="1" stop-color="#c61111"/>
+    </linearGradient>
+  </defs>
+  <rect class="field edge" x="3" y="3" width="58" height="58" rx="14" stroke-width="4"/>
+  <path
+    fill="url(#accent)"
+    d="M18 14h31v10H27v5h17c5.5 0 10 4.5 10 10v1c0 5.5-4.5 10-10 10H15V40h29v-5H28c-5.5 0-10-4.5-10-10V14Z"
+  />
+</svg>

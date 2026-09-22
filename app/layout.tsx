@@ -12,7 +12,7 @@ const instrumentSans = Instrument_Sans({
 export const metadata: Metadata = {
   title: "Shaaf Shahzad",
   description: "Personal Portfolio of Shaaf Shahzad",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [{ rel: "icon", url: "/icon.svg", type: "image/svg+xml" }],
 };
 
 export default function RootLayout({
