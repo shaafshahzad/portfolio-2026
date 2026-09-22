@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { Instrument_Sans } from "next/font/google";
 import "./globals.css";
 
-const jetBrains = JetBrains_Mono({
+const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
+  weight: "400",
   display: "swap",
+  variable: "--font-instrument-sans",
 });
 
 export const metadata: Metadata = {
@@ -19,8 +21,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={jetBrains.className}>
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try { var t = localStorage.getItem('portfolio-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (_) {}`,
+          }}
+        />
+      </head>
+      <body className={instrumentSans.variable}>{children}</body>
     </html>
   );
 }
