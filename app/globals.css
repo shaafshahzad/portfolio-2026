@@ -6,19 +6,9 @@
   --fg: #000;
   --muted: #595959;
   --line: #000;
-  --accent-red: hsl(0 84% 42%);
-  --accent-orange: hsl(28 92% 34%);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --bg: #000;
-    --fg: #fff;
-    --muted: #aaa;
-    --line: #fff;
-    --accent-red: hsl(0 84% 62%);
-    --accent-orange: hsl(28 92% 56%);
-  }
+  --accent-start: hsl(28 92% 34%);
+  --accent-end: hsl(0 84% 42%);
+  --portrait-tint: hsl(0 84% 42%);
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
@@ -26,8 +16,9 @@
   --fg: #fff;
   --muted: #aaa;
   --line: #fff;
-  --accent-red: hsl(0 84% 62%);
-  --accent-orange: hsl(28 92% 56%);
+  --accent-start: hsl(145 72% 52%);
+  --accent-end: hsl(210 92% 64%);
+  --portrait-tint: hsl(210 92% 64%);
 }
 * {
   box-sizing: border-box;
@@ -80,15 +71,28 @@ h2 {
 @keyframes accent-cycle {
   0%,
   100% {
-    color: var(--accent-orange);
+    color: var(--accent-start);
   }
   50% {
-    color: var(--accent-red);
+    color: var(--accent-end);
   }
 }
 .accent-cycle {
-  color: var(--accent-orange);
-  animation: accent-cycle 8s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  color: var(--accent-start);
+  animation: accent-cycle var(--accent-cycle-duration, 3s)
+    cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+.intro .accent-cycle {
+  --accent-cycle-duration: 2s;
+}
+#experience-heading {
+  --accent-cycle-duration: 2.7s;
+}
+#projects-heading {
+  --accent-cycle-duration: 3.3s;
+}
+.blog-link.accent-cycle {
+  --accent-cycle-duration: 4s;
 }
 .portfolio {
   display: grid;
@@ -135,6 +139,16 @@ h2 {
   border: 1px solid var(--line);
   border-radius: 22px;
 }
+.portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: var(--portrait-tint);
+  mix-blend-mode: color;
+  opacity: 0.6;
+  pointer-events: none;
+}
 .portrait img,
 .portrait canvas {
   position: absolute;
@@ -143,11 +157,15 @@ h2 {
   object-fit: cover;
   object-position: center;
 }
+.portrait img {
+  z-index: 0;
+}
 .portrait canvas {
   inset: 0;
+  z-index: 2;
   image-rendering: pixelated;
-  mix-blend-mode: color;
-  opacity: 0.86;
+  mix-blend-mode: normal;
+  opacity: 0.15;
   pointer-events: none;
 }
 .work {

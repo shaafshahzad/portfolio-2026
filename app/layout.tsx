@@ -27,7 +27,7 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `try { var t = localStorage.getItem('portfolio-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (_) {}`,
+            __html: `try { var t = localStorage.getItem('portfolio-theme'); document.documentElement.dataset.theme = t === 'dark' ? 'dark' : 'light'; } catch (_) { document.documentElement.dataset.theme = 'light'; }`,
           }}
         />
       </head>

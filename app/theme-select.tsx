@@ -3,7 +3,6 @@
 import { useSyncExternalStore } from "react";
 
 const eventName = "portfolio-theme-change";
-const mediaQuery = "(prefers-color-scheme: dark)";
 type Theme = "light" | "dark";
 
 function getTheme(): Theme {
@@ -11,13 +10,12 @@ function getTheme(): Theme {
     const saved = localStorage.getItem("portfolio-theme");
     if (saved === "light" || saved === "dark") return saved;
   } catch {
-    // The system preference remains available if storage is blocked.
+    // A blocked storage API falls back to the light default.
   }
-  return window.matchMedia(mediaQuery).matches ? "dark" : "light";
+  return "light";
 }
 
 function subscribe(callback: () => void) {
-  const media = window.matchMedia(mediaQuery);
   const sync = () => {
     document.documentElement.dataset.theme = getTheme();
     callback();
@@ -25,11 +23,9 @@ function subscribe(callback: () => void) {
   sync();
   window.addEventListener("storage", sync);
   window.addEventListener(eventName, sync);
-  media.addEventListener("change", sync);
   return () => {
     window.removeEventListener("storage", sync);
     window.removeEventListener(eventName, sync);
-    media.removeEventListener("change", sync);
   };
 }
 
